@@ -1,7 +1,7 @@
 # Recipe-Book
 
 ### Screen Shots
-[![recipescreenshots2.png](https://i.postimg.cc/TPtnkBBN/recipescreenshots2.png)](https://postimg.cc/06J6jXk7)
+[![appscreenshots.png](https://i.postimg.cc/8C8fRq3x/appscreenshots.png)](https://postimg.cc/zyjf5Pqk)
 
 ---
 
