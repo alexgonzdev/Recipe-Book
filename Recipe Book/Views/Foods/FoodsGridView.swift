@@ -34,7 +34,7 @@ struct FoodsGridView: View {
             .onAppear() {
                 viewModel.fetchFoods(name: name)
             }
-        }
+        }.navigationTitle(name)
         
         
     }

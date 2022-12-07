@@ -11,7 +11,7 @@ import SwiftUI
 struct Recipe_BookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().statusBarHidden(true)
         }
     }
 }

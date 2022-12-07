@@ -1,20 +1,16 @@
 //
-//  Recipe_BookUITests.swift
+//  AppStoreScreenshotUITests.swift
 //  Recipe BookUITests
 //
-//  Created by Alex Gonzalez on 12/4/22.
+//  Created by Alex Gonzalez on 12/5/22.
 //
-
 import XCTest
-
-final class Recipe_BookUITests: XCTestCase {
-
+final class AppStoreScreenshotUITests: XCTestCase {
     private var app: XCUIApplication!
-    
+     
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
-        
         // Example of passing in launch arguments which can be read in the app
         // by calling CommandLine.arguments.contains("--uitesting")
         // app.launchArguments.append("--uitesting")
@@ -32,6 +28,4 @@ final class Recipe_BookUITests: XCTestCase {
         snapshot("Content View")
     }
      
-    
-
 }

@@ -37,6 +37,7 @@
 		A894CE30293D276800F52ED3 /* IngredientStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE2F293D276800F52ED3 /* IngredientStack.swift */; };
 		A894CE32293E296400F52ED3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE31293E296300F52ED3 /* SnapshotHelper.swift */; };
 		A894CE34293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE33293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift */; };
+		A894CE362940AC0600F52ED3 /* ApiCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE352940AC0600F52ED3 /* ApiCallTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		A894CE2F293D276800F52ED3 /* IngredientStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientStack.swift; sourceTree = "<group>"; };
 		A894CE31293E296300F52ED3 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		A894CE33293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotUITests.swift; sourceTree = "<group>"; };
+		A894CE352940AC0600F52ED3 /* ApiCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				A894CDDB293CC80600F52ED3 /* Recipe_BookTests.swift */,
+				A894CE352940AC0600F52ED3 /* ApiCallTests.swift */,
 			);
 			path = "Recipe BookTests";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A894CE362940AC0600F52ED3 /* ApiCallTests.swift in Sources */,
 				A894CDDC293CC80600F52ED3 /* Recipe_BookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
