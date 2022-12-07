@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AppStoreScreenshots.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Recipe Book.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Recipe BookUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A894CDC6293CC80300F52ED3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A894CDD6293CC80600F52ED3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A894CDE0293CC80600F52ED3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
