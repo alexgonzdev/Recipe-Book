@@ -10,18 +10,19 @@ import Foundation
 
 final class FoodViewViewModel: ObservableObject {
     @Published var meals: [Meal] = []
-    @Published var isLoading = false
+    
     
     
     func fetchFoods(name: String) {
-        MealAPI.shared.getFoods(name:name) { [self] result in
+        Network().fetch(FilterEndpoint(name: name)) { [self] (result: Result<Meals, APIError>) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let meals):
-                    self.meals = meals
+                    print(meals)
+                    self.meals = meals.meals
                    // print(self.meals)
-                    
                 case .failure(let error):
+                    print(result)
                     switch error {
                     case .invalidURL:
                         print("There is an error trying to reach the server. If this persists, please contact support.")
@@ -36,5 +37,16 @@ final class FoodViewViewModel: ObservableObject {
             }
             
         }
+    }
+}
+
+
+struct FilterEndpoint: APIResource {
+    var name: String?
+    var path: String {
+        guard let name = name else {
+            preconditionFailure("name is required")
+        }
+        return "/api/json/v1/1/filter.php?c=\(name)"
     }
 }

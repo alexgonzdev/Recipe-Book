@@ -28,7 +28,8 @@ final class Recipe_BookUITests: XCTestCase {
  
     func testScreenshot1() throws {
         sleep(10)
-        app.buttons.firstMatch.tap()
+        app.buttons.element(boundBy: 1)
+        sleep(5)
         snapshot("Content View")
     }
      

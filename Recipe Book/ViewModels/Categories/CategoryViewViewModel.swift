@@ -8,31 +8,30 @@
 import Foundation
 final class CategoryViewViewModel: ObservableObject {
     @Published var categories: [Category] = []
-    @Published var isLoading = false
     
+    
+   
     
     func fetchCategories() {
-        MealAPI.shared.getCategories { [self] result in
-            DispatchQueue.main.async {
+        Network().fetch(CategoryEndpoint()) { [self] (result: Result<CategoriesResponse, APIError>) in
+            DispatchQueue.main.async { [self] in
                 switch result {
-                case .success(let categories):
-                    self.categories = categories
-                   print(self.categories)
                     
+                case .success(let categories):
+                
+                    //print(categories)
+                    self.categories = categories.categories
                 case .failure(let error):
-                    switch error {
-                    case .invalidURL:
-                        print("There is an error trying to reach the server. If this persists, please contact support.")
-                    case .invalidData:
-                        print("Unable to complete your request at this time. Please check your internet connection.")
-                    case .invalidResponse:
-                        print("Invalid response from the server. Please try again or contact support.")
-                    case .unableToComplete:
-                        print("The data received from the server was invalid. Please try again or contact support.")
-                    }
+                   // print(result)
+                    print(error.localizedDescription)
                 }
             }
-            
         }
+    }
+    
+}
+struct CategoryEndpoint: APIResource {
+    var path: String {
+        return "/api/json/v1/1/categories.php"
     }
 }

@@ -24,8 +24,12 @@ final class AppStoreScreenshotUITests: XCTestCase {
  
     func testScreenshot1() throws {
         sleep(10)
-        app.buttons.firstMatch.tap()
+        app.buttons.element(boundBy: 2).tap()
+        sleep(5)
+        app.buttons.element(boundBy: 5).tap()
+        sleep(5)
         snapshot("Content View")
     }
+     
      
 }

@@ -10,7 +10,6 @@ struct CategoryCell: View {
     let imageURL: String
     let name: String
     let sizing: CGFloat
-    let screenSize = UIScreen.main.bounds.size
 
     
     var body: some View {

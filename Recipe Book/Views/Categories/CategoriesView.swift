@@ -7,7 +7,6 @@
 
 import SwiftUI
 struct CategoryView: View {
-    
     @ObservedObject var viewModel = CategoryViewViewModel()
     
     
@@ -28,7 +27,9 @@ struct CategoryView: View {
                     }
                 }
             }
-            .onAppear(perform: viewModel.fetchCategories)
+                .onAppear(perform: viewModel.fetchCategories)
+            .navigationTitle("Categories")
+            .navigationBarTitleDisplayMode(.inline)
         }
             .accentColor(.white)
     }
@@ -42,3 +43,5 @@ struct CategoryView_Previews: PreviewProvider {
         CategoryView()
     }
 }
+
+

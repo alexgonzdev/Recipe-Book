@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8247EB829474F95007C2272 /* NewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8247EB729474F95007C2272 /* NewAPI.swift */; };
 		A894CDCB293CC80300F52ED3 /* Recipe_BookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CDCA293CC80300F52ED3 /* Recipe_BookApp.swift */; };
 		A894CDCD293CC80300F52ED3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CDCC293CC80300F52ED3 /* ContentView.swift */; };
 		A894CDCF293CC80500F52ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A894CDCE293CC80500F52ED3 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		A894CE32293E296400F52ED3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE31293E296300F52ED3 /* SnapshotHelper.swift */; };
 		A894CE34293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE33293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift */; };
 		A894CE362940AC0600F52ED3 /* ApiCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894CE352940AC0600F52ED3 /* ApiCallTests.swift */; };
+		A8C994232943A790004291DB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C994222943A790004291DB /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8247EB729474F95007C2272 /* NewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAPI.swift; sourceTree = "<group>"; };
 		A894CDC7293CC80300F52ED3 /* Recipe Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A894CDCA293CC80300F52ED3 /* Recipe_BookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_BookApp.swift; sourceTree = "<group>"; };
 		A894CDCC293CC80300F52ED3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		A894CE31293E296300F52ED3 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		A894CE33293E2EA300F52ED3 /* AppStoreScreenshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotUITests.swift; sourceTree = "<group>"; };
 		A894CE352940AC0600F52ED3 /* ApiCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallTests.swift; sourceTree = "<group>"; };
+		A8C994222943A790004291DB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 			children = (
 				A894CE04293CEFE200F52ED3 /* API.swift */,
 				A894CE06293CF00F00F52ED3 /* APIError.swift */,
+				A8C994222943A790004291DB /* Test.swift */,
+				A8247EB729474F95007C2272 /* NewAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				A894CE23293D25CC00F52ED3 /* DetailedView.swift in Sources */,
 				A894CE12293D21C700F52ED3 /* Meals.swift in Sources */,
 				A894CE28293D26D500F52ED3 /* PickerView.swift in Sources */,
+				A8247EB829474F95007C2272 /* NewAPI.swift in Sources */,
 				A894CE02293CD01600F52ED3 /* ScreenSize.swift in Sources */,
 				A894CDCD293CC80300F52ED3 /* ContentView.swift in Sources */,
 				A894CE2C293D271700F52ED3 /* InstructionsStack.swift in Sources */,
@@ -461,6 +468,7 @@
 				A894CDFD293CCA6C00F52ED3 /* Color.swift in Sources */,
 				A894CE0A293CF0C100F52ED3 /* Category.swift in Sources */,
 				A894CE07293CF00F00F52ED3 /* APIError.swift in Sources */,
+				A8C994232943A790004291DB /* Test.swift in Sources */,
 				A894CE1A293D225F00F52ED3 /* FoodViewViewModel.swift in Sources */,
 				A894CE1C293D228B00F52ED3 /* DetailedViewViewModel.swift in Sources */,
 				A894CDFA293CCA0700F52ED3 /* CategoriesView.swift in Sources */,
