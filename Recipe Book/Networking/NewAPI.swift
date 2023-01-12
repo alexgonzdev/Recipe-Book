@@ -21,11 +21,14 @@ extension APIResource {
     }
 }
 
+
 protocol Networking {
-        func fetch<T: Decodable>(_ endpoint: APIResource, completion: @escaping (Result<T, APIError>) -> Void)
+    func fetch<T: Decodable>(_ endpoint: APIResource, completion: @escaping (Result<T, APIError>) -> Void)
 }
 
 extension Networking {
+    
+    
     func fetch<T: Decodable>(_ endpoint: APIResource, completion: @escaping (Result<T, APIError>) -> Void) {
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
@@ -93,9 +96,8 @@ extension Networking {
 
 struct Network: Networking {}
 
-
-
-
-
-
-
+enum Paths: String {
+    case lookup = "lookup.php?i="
+    case categories = "categories.php"
+    case filter = "filter.php?c="
+}

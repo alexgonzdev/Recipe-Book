@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct CategoryView: View {
-    @ObservedObject var viewModel = CategoryViewViewModel()
+    @ObservedObject var viewModel: CategoryViewModel
     
     
     let gridItem = [GridItem(.fixed(170), spacing: 20),GridItem(.fixed(170), spacing: 20)]
@@ -38,10 +38,6 @@ struct CategoryView: View {
 }
 
 
-struct CategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryView()
-    }
-}
+
 
 

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var categoryVM = CategoryViewModel(networking: Network())
     var body: some View {
-        CategoryView()
+        CategoryView(viewModel: categoryVM)
     }
 }
 
