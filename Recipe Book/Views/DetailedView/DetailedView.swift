@@ -11,7 +11,7 @@ struct DetailedView: View {
     var dessertId: String
     var imageUrl: String
     @State var selectedCategory = "Ingredients"
-    @ObservedObject private var detailViewModel = DetailedViewViewModel()
+    @ObservedObject var detailViewModel: DetailedViewViewModel
     
     var body: some View {
         

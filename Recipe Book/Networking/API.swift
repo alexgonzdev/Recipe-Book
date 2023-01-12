@@ -21,7 +21,6 @@ extension APIResource {
     }
 }
 
-
 protocol Networking {
     func fetch<T: Decodable>(_ endpoint: APIResource, completion: @escaping (Result<T, APIError>) -> Void)
 }
@@ -100,4 +99,11 @@ enum Paths: String {
     case lookup = "lookup.php?i="
     case categories = "categories.php"
     case filter = "filter.php?c="
+}
+
+enum APIError: Error {
+    case invalidURL
+    case unableToComplete
+    case invalidResponse
+    case invalidData
 }

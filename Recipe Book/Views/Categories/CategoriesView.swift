@@ -8,6 +8,7 @@
 import SwiftUI
 struct CategoryView: View {
     @ObservedObject var viewModel: CategoryViewModel
+    var foodVm = FoodViewViewModel(networking: Network())
     
     
     let gridItem = [GridItem(.fixed(170), spacing: 20),GridItem(.fixed(170), spacing: 20)]
@@ -20,7 +21,7 @@ struct CategoryView: View {
                 ScrollView {
                     LazyVGrid(columns: gridItem) {
                         ForEach(viewModel.categories, id: \.self) { category in
-                            NavigationLink(destination: FoodsGridView(name: category.name)) {
+                            NavigationLink(destination: FoodsGridView(name: category.name, viewModel: foodVm)) {
                                 CategoryCell(imageURL: category.imageURL, name: category.name, sizing: 110)
                             }
                         }

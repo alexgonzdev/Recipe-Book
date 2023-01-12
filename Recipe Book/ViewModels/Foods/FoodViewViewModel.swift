@@ -8,36 +8,29 @@
 import Foundation
 
 
+
 final class FoodViewViewModel: ObservableObject {
+    private var network: Networking
+
+    init(networking: Networking) {
+        network = networking
+    }
     @Published var meals: [Meal] = []
-    
-    
-    
     func fetchFoods(name: String) {
-        Network().fetch(FilterEndpoint(name: name)) { [self] (result: Result<Meals, APIError>) in
-            DispatchQueue.main.async {
+        network.fetch(FilterEndpoint(name: name)) { [self] (result: Result<Meals, APIError>) in
+            DispatchQueue.main.async { [self] in
                 switch result {
-                case .success(let meals):
-                    print(meals)
-                    self.meals = meals.meals
-                   // print(self.meals)
+                case .success(let categories):
+                    //print(categories)
+                    self.meals = categories.meals
+                    
                 case .failure(let error):
-                    print(result)
-                    switch error {
-                    case .invalidURL:
-                        print("There is an error trying to reach the server. If this persists, please contact support.")
-                    case .invalidData:
-                        print("Unable to complete your request at this time. Please check your internet connection.")
-                    case .invalidResponse:
-                        print("Invalid response from the server. Please try again or contact support.")
-                    case .unableToComplete:
-                        print("The data received from the server was invalid. Please try again or contact support.")
-                    }
+                    print(error.localizedDescription)
                 }
             }
-            
         }
     }
+   
 }
 
 

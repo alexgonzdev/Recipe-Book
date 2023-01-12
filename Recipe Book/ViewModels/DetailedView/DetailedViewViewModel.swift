@@ -9,31 +9,24 @@ import Foundation
 
 class DetailedViewViewModel: ObservableObject {
     
+    var network: Networking
+    init(networking: Networking) {
+        network = networking
+    }
     @Published public var recipe: Recipe = Recipe(name: "Test", instructions: [""], ingredients: ["":""])
-    
     func fetchDetails(id: String) {
-        Network().fetch(LookupEndpoint(id: id)) { [self] (result: Result<Recipe, APIError>) in
+        network.fetch(LookupEndpoint(id: id)) { [self] (result: Result<Recipe, APIError>) in
             DispatchQueue.main.async { [self] in
                 switch result {
-                case .success(let reciperesponse):
-                    print(reciperesponse)
-                    self.recipe = reciperesponse
+                case .success(let recipe):
+                    
+                    self.recipe = recipe
                 case .failure(let error):
-                    switch error {
-                    case .invalidURL:
-                        print("There is an error trying to reach the server. If this persists, please contact support.")
-                    case .invalidData:
-                        print("Unable to complete your request at this time. Please check your internet connection.")
-                    case .invalidResponse:
-                        print("Invalid response from the server. Please try again or contact support.")
-                    case .unableToComplete:
-                        print("The data received from the server was invalid. Please try again or contact support.")
-                    }
+                    print(error.localizedDescription)
                 }
             }
         }
     }
-    
 }
     
     
@@ -68,7 +61,6 @@ func formatResponse(unparsedData: [String:Any]) -> Recipe? {
             item in
             return String(item)}
     }
-    
     var ingredients = [String:(name: String, measurement: String)]()
     for (key,value) in recipeInfo {
         let ingredientPrefix = "strIngredient"

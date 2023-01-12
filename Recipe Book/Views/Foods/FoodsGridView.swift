@@ -10,7 +10,8 @@ import SwiftUI
 struct FoodsGridView: View {
     let name: String
 
-    @StateObject private var viewModel = FoodViewViewModel()
+    @ObservedObject var viewModel: FoodViewViewModel
+    var detailVm = DetailedViewViewModel(networking: Network())
     let gridItem = [GridItem(.fixed(170), spacing: 20),GridItem(.fixed(170), spacing: 20)]
     
     var body: some View {
@@ -20,7 +21,7 @@ struct FoodsGridView: View {
                 LazyVGrid(columns: gridItem) {
                     ForEach(viewModel.meals, id: \.self) { meal in
                         
-                        NavigationLink(destination: DetailedView(dessertId: meal.idMeal, imageUrl: meal.strMealThumb)) {
+                        NavigationLink(destination: DetailedView(dessertId: meal.idMeal, imageUrl: meal.strMealThumb, detailViewModel: detailVm)) {
                             
                             CategoryCell(imageURL: meal.strMealThumb, name: meal.strMeal, sizing: 120)
                         }

@@ -8,20 +8,9 @@
 import Foundation
 
 
-class MockCategoryService: Networking {
-    private let jsonString = """
-{
-  "categories": [
-    {
-      "strCategory": "Beef",
-      "strCategoryThumb": "https://www.themealdb.com/images/category/beef.png",
-    }
-  ]
-}
-"""
-    
-    
-    func fetch<T>(completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
+class MockService: Networking {
+
+    func fetch<T>(jsonString: String, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
         
         let jsonData = jsonString.data(using: .utf8)!
         do {

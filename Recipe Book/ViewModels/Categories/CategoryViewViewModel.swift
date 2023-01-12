@@ -28,8 +28,7 @@ final class CategoryViewModel: ObservableObject {
             }
         }
     }
-    
-    
+     
 }
 struct CategoryEndpoint: APIResource {
     var path: String {
